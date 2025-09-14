@@ -74,3 +74,199 @@
   </div>
 </div>
 
+<!-- Styling card-face-front -->
+<style>
+  /* Card container */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    perspective: 1000px;
+  }
+
+  /* Card base */
+  .card {
+    width: 100%;
+    min-height: 650px;
+    max-height: 90vh;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Flipped state */
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  /* Card faces */
+  .card-face {
+    position: absolute;
+    width: -webkit-fill-available;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--br-button);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+
+  .front {
+    background-color: var(--primary-bg-color);
+    text-align: center;
+  }
+
+  .back {
+    background-color: var(--secondary-bg-color);
+    transform: rotateY(180deg);
+  }
+
+  /* Buttons */
+  .git-button,
+  .flip-button {
+    font-family: var(--site-font);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: var(--br-button);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem auto;
+    width: fit-content;
+  }
+
+  .git-button {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .flip-button {
+    background: var(--primary-color);
+    color: var(--primary-text-font);
+    font-weight: 400;
+  }
+
+  /* Front text */
+  .hero-text {
+    font-family: var(--site-font);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .main-title {
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-weight: 400;
+    transform: rotate(0deg);
+  }
+
+  .second-hero-text {
+    font-family: var(--site-font);
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0.5rem auto;
+    max-width: 14rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .second-hero-text strong {
+    font-weight: 700;
+  }
+
+  /* Mugshot altijd onderaan en gecentreerd */
+  .member-mugshot {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 1rem;
+    align-self: center;
+    border-radius: var(--br-button);
+  }
+
+  /* Styling back card-face */
+  .back-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-family: var(--site-font);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  /* Notes grid */
+  .notes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .note {
+    padding: 1rem;
+    border-radius: var(--br-note);
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+  }
+
+  .sub-title {
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .info-text {
+    font-family: var(--site-font);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Notes backgrounds */
+  .note:nth-child(1) {
+    background-color: #f7f1dd;
+  }
+  .note:nth-child(2) {
+    background-color: #f9dce6;
+  }
+  .note:nth-child(3) {
+    background-color: #d6e2dd;
+  }
+  .note:nth-child(4) {
+    background-color: #e0d6c0;
+  }
+
+  @media (min-width: 501px) {
+    .main-title {
+      font-size: 3.5rem;
+      transform: rotate(350deg);
+    }
+    .second-hero-text {
+      max-width: 17rem;
+      font-size: 1.2rem;
+    }
+    .member-mugshot {
+      max-width: 150px;
+    }
+    .notes {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+  }
+</style>
