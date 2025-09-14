@@ -1,0 +1,23 @@
+{
+  "name": "your-tribe-for-life-profile-card",
+  "version": "1.0.0",
+  "description": "Redesign je visitekaartje op basis van een headless CMS en een framework.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimnikitaschijf/your-tribe-for-life-profile-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimnikitaschijf/your-tribe-for-life-profile-card/issues"
+  },
+  "homepage": "https://github.com/kimnikitaschijf/your-tribe-for-life-profile-card#readme"
+}

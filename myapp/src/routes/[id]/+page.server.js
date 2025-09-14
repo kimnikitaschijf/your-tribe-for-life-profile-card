@@ -1,7 +1,9 @@
-export async function load({ url, params }) {
-    const memberResponse = await fetch ('https://fdnd.directus.app/items/person/'+ params.id)
-    const 
+export async function load({ params }) {
+    const memberResponse = await fetch(
+        `https://fdnd.directus.app/items/person/${params.id}?fields=*,squads.squad_id.name,squads.squad_id.cohort`
+    );
 
-    return {member: membersData.data};
+    const memberData = await memberResponse.json();
+
+    return { member: memberData.data };
 }
-
