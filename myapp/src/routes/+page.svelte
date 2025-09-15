@@ -40,31 +40,22 @@
       <h2 class="back-title">Read more <em>about me</em> below...</h2>
       <div class="notes">
         <div class="note">
-          <h3 class="sub-title">Title</h3>
+          <h3 class="sub-title">About me</h3>
           <p class="info-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            I'm 20 years old. I live in Heerhugowaard with my parents.
           </p>
         </div>
 
         <div class="note">
-          <h3 class="sub-title">Title</h3>
+          <h3 class="sub-title">Hobby's</h3>
           <p class="info-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            I love to read books, go for long walks and bake delicious treats :)
           </p>
         </div>
 
         <div class="note">
-          <h3 class="sub-title">Title</h3>
-          <p class="info-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
-
-        <div class="note">
-          <h3 class="sub-title">Title</h3>
-          <p class="info-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <h3 class="sub-title">Study's</h3>
+          <p class="info-text">I'm a second year FDND student.</p>
         </div>
       </div>
       <button class="flip-button" on:click={toggleFlip}
@@ -108,15 +99,14 @@
   .card-face {
     position: absolute;
     width: -webkit-fill-available;
-    width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: var(--br-button);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: space-evenly;
+    padding: 1rem 1rem 0;
     box-shadow: var(--box-shadow);
   }
 
@@ -162,13 +152,13 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 100;
-    margin: 0;
+    margin-bottom: 2rem;
   }
 
   .main-title {
     font-family: var(--header-font);
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
     font-weight: 400;
     transform: rotate(0deg);
   }
@@ -177,7 +167,7 @@
     font-family: var(--site-font);
     font-size: 1rem;
     font-weight: 100;
-    margin: 0.5rem auto;
+    margin: 2rem auto;
     max-width: 14rem;
     line-height: 1.4;
     text-align: center;
@@ -195,7 +185,6 @@
     object-fit: cover;
     margin-top: 1rem;
     align-self: center;
-    border-radius: var(--br-button);
   }
 
   /* Styling back card-face */
@@ -228,7 +217,7 @@
     font-family: var(--header-font);
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
     letter-spacing: 1.5px;
   }
 
@@ -264,9 +253,9 @@
     .member-mugshot {
       max-width: 150px;
     }
-    .notes {
+    /* .notes {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
-    }
+    } */
   }
 </style>
