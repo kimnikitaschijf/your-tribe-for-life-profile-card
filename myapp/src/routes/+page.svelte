@@ -72,8 +72,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 400px;
+    /* width: 100%; */
+    max-width: 350px;
     margin: 0 auto;
     perspective: 1000px;
   }
